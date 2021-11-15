@@ -8,26 +8,9 @@
 	
 	<style>
 	model-viewer{
-  width: 1200px;
+  width: 500px;
   height: 500px;
 }
-
-  button{
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: blue;
-    box-sizing: border-box;
-  }
-
-  button[slot="hotspot-hand"]{
-    --min-hotspot-opacity: 0;
-    background-color: red;
-  }
-
-
   #annotation{
     background-color: #888888;
     position: absolute;
@@ -40,10 +23,9 @@
     display: none;
   }
 </style>
-<div class="sketchfab-embed-wrapper"> <div>
-    <a rel="ar" href="/assets/models/my-model.usdz">
-	    <iframe title="untitled" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1200" height="500" src="https://sketchfab.com/models/a271b0252dc7436dbb1059259e5f5db9/embed?autospin=0&ui_theme=dark">  </a>
-</div> </iframe> </div>
+<div class="sketchfab-embed-wrapper"> <div> 
+<iframe title="untitled" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1200" height="500" src="https://sketchfab.com/models/a271b0252dc7436dbb1059259e5f5db9/embed?autospin=0&ui_theme=dark"> <model-viewer id="hotspot-demo" ar ar-modes="webxr" alt="Concrete pump" ios-src="https://hivsem.github.io/hivsem/export3-TEST_472459-5.usdz"> </model-viewer> 
+</iframe> </div>
 <model-viewer id="hotspot-demo" ar ar-modes="webxr" alt="Concrete pump" ios-src="https://hivsem.github.io/hivsem/export3-TEST_472459-5.usdz">
 </model-viewer>
     </body>
